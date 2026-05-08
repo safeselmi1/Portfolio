@@ -68,11 +68,11 @@ export default function Hero() {
           <div className="relative">
             <div className="absolute inset-0 bg-violet-500/20 blur-3xl rounded-full" />
 
-            <img
-              src="/profile.png"
-              alt="Safé Selmi"
-              className="relative w-[260px] h-[420px] object-cover rounded-[2rem] border border-white/10 shadow-2xl"
-            />
+         <img
+  src="/profile.png"
+  alt="Safé Selmi"
+  className="relative w-[260px] h-[420px] object-contain rounded-[2rem] border border-white/10 shadow-2xl bg-white/5 backdrop-blur-sm p-4"
+/>
           </div>
         </div>
       </div>
