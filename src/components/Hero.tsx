@@ -41,7 +41,7 @@ export default function Hero() {
             </a>
 
             <a
-              href="/safe_selmi_cv.pdf"
+              href="/Safe_Selmi_CV.pdf"
               download
               className="px-7 py-3.5 rounded-xl border border-white/15 text-white text-sm font-medium hover:border-violet-400 hover:text-violet-400 transition-all hover:-translate-y-0.5"
             >
@@ -71,7 +71,7 @@ export default function Hero() {
  <img
   src="/profile.png"
   alt="Safé Selmi"
-  className="relative w-[380px] h-[620px] object-contain rounded-[2rem]"
+  className="relative w-[400px] h-[620px] object-contain rounded-[2rem]"
 />
           </div>
         </div>
