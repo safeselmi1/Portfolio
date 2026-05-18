@@ -41,7 +41,7 @@ export default function Hero() {
             </a>
 
             <a
-              href="/Safe_Selmi_CV.pdf"
+              href="/cv_safe_selmi.pdf"
               download
               className="px-7 py-3.5 rounded-xl border border-white/15 text-white text-sm font-medium hover:border-violet-400 hover:text-violet-400 transition-all hover:-translate-y-0.5"
             >
