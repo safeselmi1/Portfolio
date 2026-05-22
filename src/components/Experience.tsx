@@ -1,5 +1,12 @@
 const experiences = [
   {
+    date: "2025–2026\nInstructor",
+    role: "Programming Instructor",
+    company: "// OpusLAB",
+    description:
+      "Trained 20+ learners aged 12–22 on Python, HTML/CSS, JavaScript and Algorithms. Designed hands-on exercises and mini-projects adapted to different age groups and skill levels.",
+  },
+  {
     date: "2024\nInternship",
     role: "Full-Stack Developer Intern",
     company: "// AI E-Learning Startup",
