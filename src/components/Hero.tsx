@@ -16,7 +16,7 @@ export default function Hero() {
             <img
               src="/profile.png"
               alt="Safé Selmi"
-              className="w-32 h-32 rounded-full object-cover object-top"
+              className="w-56 h-56 rounded-full object-cover object-top"
               style={{ border: "3px solid rgba(209,116,210,0.4)" }}
             />
           </div>
