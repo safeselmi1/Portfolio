@@ -1,64 +1,35 @@
 const skillGroups = [
-  {
-    label: "Frontend",
-    skills: ["Next.js", "React", "TypeScript", "Tailwind CSS", "shadcn/ui"],
-  },
-  {
-    label: "Backend",
-    skills: ["Node.js", "NestJS", "Express", "REST APIs", "GraphQL"],
-  },
-  {
-    label: "Databases",
-    skills: ["MongoDB", "PostgreSQL", "Redis", "Prisma"],
-  },
-  {
-    label: "DevOps & Tools",
-    skills: ["Docker", "Vercel", "Git", "GitHub Actions", "Linux"],
-  },
-  {
-    label: "AI & Integrations",
-    skills: ["OpenAI API", "LangChain", "Stripe", "Google APIs"],
-  },
-  {
-    label: "CMS & Other",
-    skills: ["WordPress", "WooCommerce", "PHP", "Figma"],
-  },
+  { label: "Frontend", skills: "React · Next.js · Angular · TypeScript · Tailwind CSS · JavaScript" },
+  { label: "Backend", skills: "Node.js · NestJS · Spring Boot · Java · .NET / C# · PHP · Python" },
+  { label: "Architecture", skills: "Microservices · REST APIs · SOLID · DDD · TDD / BDD" },
+  { label: "Databases", skills: "MongoDB · MySQL · Redis · Neo4j · SQL" },
+  { label: "DevOps & Cloud", skills: "Docker · CI/CD · GCP · Azure · Git" },
+  { label: "Tools", skills: "Figma · Postman · Trello · WordPress · SCRUM" },
 ];
 
 export default function Skills() {
   return (
     <section id="skills" className="max-w-4xl mx-auto px-10 py-24">
-      <p className="font-mono text-xs uppercase tracking-widest text-violet-400 mb-4">
-        03 — Skills
+      <p className="font-mono text-xs uppercase tracking-widest mb-8" style={{ color: "#D174D2" }}>
+        Skills
       </p>
-      <h2 className="font-serif text-[clamp(2rem,5vw,3rem)] text-white leading-tight mb-12">
-        Tech Stack
-      </h2>
 
-      <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+      <div style={{ borderTop: "1px solid rgba(255,255,255,0.08)" }}>
         {skillGroups.map(({ label, skills }) => (
           <div
             key={label}
-            className="bg-[#111118] border border-white/8 rounded-2xl p-6"
+            className="grid md:grid-cols-[160px_1fr] gap-4 py-6"
+            style={{ borderBottom: "1px solid rgba(255,255,255,0.08)" }}
           >
-            <p className="font-mono text-xs uppercase tracking-widest text-violet-400 mb-4">
+            <span className="font-mono text-xs uppercase tracking-widest text-white/30 pt-0.5">
               {label}
-            </p>
-            <div className="flex flex-wrap gap-2">
-              {skills.map((skill) => (
-                <span
-                  key={skill}
-                  className="text-sm px-3 py-1.5 rounded-lg bg-white/4 border border-white/8 text-zinc-300 hover:border-violet-400/50 hover:text-violet-300 transition-all cursor-default"
-                >
-                  {skill}
-                </span>
-              ))}
-            </div>
+            </span>
+            <p className="text-white/60 text-sm leading-relaxed">{skills}</p>
           </div>
         ))}
       </div>
 
-      <div className="w-full h-px bg-gradient-to-r from-transparent via-white/10 to-transparent mt-24" />
+      <div className="w-full h-px mt-24" style={{ background: "rgba(255,255,255,0.08)" }} />
     </section>
   );
 }

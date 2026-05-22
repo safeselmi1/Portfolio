@@ -16,14 +16,12 @@ export default function Navbar() {
 
   return (
     <nav
-      className={`fixed top-0 left-0 right-0 z-50 flex items-center justify-between px-10 py-5 border-b transition-all duration-300 ${
-        scrolled
-          ? "border-white/10 bg-[#0a0a0f]/90 backdrop-blur-xl"
-          : "border-transparent bg-transparent"
+      className={`fixed top-0 left-0 right-0 z-50 flex items-center justify-between px-10 py-5 transition-all duration-300 ${
+        scrolled ? "bg-[#16101f]/90 backdrop-blur-md border-b border-white/8" : "bg-transparent"
       }`}
     >
       <Link href="/" className="font-serif text-xl text-white tracking-wide">
-        Saf<span className="text-violet-400 italic">é</span>
+        Saf<span className="italic" style={{ color: "#D174D2" }}>é</span>
       </Link>
 
       <ul className="hidden md:flex items-center gap-8">
@@ -31,7 +29,7 @@ export default function Navbar() {
           <li key={link}>
             <a
               href={`#${link.toLowerCase()}`}
-              className="text-xs uppercase tracking-widest text-zinc-400 hover:text-white transition-colors font-medium"
+              className="text-xs uppercase tracking-widest text-white/50 hover:text-white transition-colors"
             >
               {link}
             </a>
@@ -39,9 +37,9 @@ export default function Navbar() {
         ))}
       </ul>
 
-      <div className="flex items-center gap-2 text-xs border border-white/15 rounded-full px-4 py-1.5 text-emerald-400 bg-emerald-400/5">
-        <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" />
-        Available
+      <div className="flex items-center gap-2 text-xs" style={{ color: "#7a9e7e" }}>
+        <span className="w-1.5 h-1.5 rounded-full animate-pulse" style={{ background: "#7a9e7e" }} />
+        available
       </div>
     </nav>
   );

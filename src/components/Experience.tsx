@@ -1,61 +1,64 @@
 const experiences = [
   {
-    date: "2025–2026\nInstructor",
+    date: "Jan 2026 – Present",
+    role: "Freelance Developer",
+    company: "Self-employed",
+    description:
+      "WooCommerce fitness platform with subscriptions, auto workout generation, and personalised client dashboard. Sustainable agriculture site with SEO-optimised responsive design.",
+  },
+  {
+    date: "2025 – 2026",
     role: "Programming Instructor",
-    company: "// OpusLAB",
+    company: "OpusLAB",
     description:
       "Trained 20+ learners aged 12–22 on Python, HTML/CSS, JavaScript and Algorithms. Designed hands-on exercises and mini-projects adapted to different age groups and skill levels.",
   },
   {
-    date: "2024\nInternship",
-    role: "Full-Stack Developer Intern",
-    company: "// AI E-Learning Startup",
+    date: "Feb – Aug 2025",
+    role: "Full-Stack Engineer",
+    company: "OpusLAB · Final Year Internship",
     description:
-      "Built a modular e-learning platform with adaptive learning algorithms, real-time tracking dashboards and automated educational content workflows using NestJS, Next.js and MongoDB.",
+      "Built a modular e-learning SaaS with intelligent content adaptation and real-time learner tracking. Applied SOLID and DDD principles; set up CI/CD pipelines and Docker-based deployments. 3-dev SCRUM team · 2-week sprints.",
   },
   {
-    date: "2023–2024\nFreelance",
-    role: "WordPress & WooCommerce Developer",
-    company: "// Freelance",
+    date: "Jul – Aug 2024",
+    role: "Web Developer",
+    company: "TACIRCREA · Internship",
     description:
-      "Delivered custom WordPress and WooCommerce solutions for clients, including a full fitness subscription platform with automated session generation and member management.",
+      "Developed a project-management app centralising 50+ innovative projects. Integrated Google Sheets synchronisation for automated reporting.",
   },
   {
-    date: "2023\nProject",
-    role: "Full-Stack Developer",
-    company: "// TACIRCREA",
+    date: "Summer 2024",
+    role: "Frontend Developer",
+    company: "OpusLAB · Summer Internship",
     description:
-      "Designed and built a project management platform for innovative project holders, with centralized data management and Google Sheets API integration for stakeholder reporting.",
+      "Designed and built the official OpusLAB website; improved SEO and UX.",
   },
 ];
 
 export default function Experience() {
   return (
     <section id="experience" className="max-w-4xl mx-auto px-10 py-24">
-      <p className="font-mono text-xs uppercase tracking-widest text-violet-400 mb-4">
-        04 — Experience
+      <p className="font-mono text-xs uppercase tracking-widest mb-8" style={{ color: "#D174D2" }}>
+        Experience
       </p>
-      <h2 className="font-serif text-[clamp(2rem,5vw,3rem)] text-white leading-tight mb-12">
-        Career
-      </h2>
 
-      <div className="flex flex-col">
-        {experiences.map(({ date, role, company, description }, i) => (
+      <div style={{ borderTop: "1px solid rgba(255,255,255,0.08)" }}>
+        {experiences.map(({ date, role, company, description }) => (
           <div
-            key={role}
-            className={`grid md:grid-cols-[160px_1fr] gap-8 py-8 ${
-              i < experiences.length - 1 ? "border-b border-white/8" : ""
-            }`}
+            key={role + company}
+            className="grid md:grid-cols-[160px_1fr] gap-6 py-8"
+            style={{ borderBottom: "1px solid rgba(255,255,255,0.08)" }}
           >
-            <div className="font-mono text-xs text-zinc-500 whitespace-pre-line leading-relaxed pt-0.5">
+            <div className="font-mono text-xs text-white/30 leading-relaxed pt-0.5">
               {date}
             </div>
             <div>
-              <div className="text-base font-medium text-white mb-1">{role}</div>
-              <div className="font-mono text-xs text-violet-400 mb-3">
+              <div className="text-white font-medium">{role}</div>
+              <div className="font-mono text-xs mt-0.5 mb-3" style={{ color: "#E0563F" }}>
                 {company}
               </div>
-              <p className="text-sm text-zinc-400 leading-relaxed font-light">
+              <p className="text-sm text-white/50 leading-relaxed font-light">
                 {description}
               </p>
             </div>
@@ -63,7 +66,7 @@ export default function Experience() {
         ))}
       </div>
 
-      <div className="w-full h-px bg-gradient-to-r from-transparent via-white/10 to-transparent mt-24" />
+      <div className="w-full h-px mt-24" style={{ background: "rgba(255,255,255,0.08)" }} />
     </section>
   );
 }

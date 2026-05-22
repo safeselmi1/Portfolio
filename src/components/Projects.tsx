@@ -1,129 +1,100 @@
-const projectSections = [
+const projects = [
   {
-    title: "Professional Projects",
-    projects: [
-      {
-        title: "Lamiss Fitness Platform",
-        description:
-          "WooCommerce fitness platform with subscriptions, client account access, and personalized training program management.",
-        tech: ["WordPress", "WooCommerce", "PHP", "CSS"],
-        link: "https://shop.lamissfitness.com/my-account/",
-      },
-      {
-        title: "Agrimorb Website",
-        description:
-          "Website dedicated to sustainable agriculture and local products with a clean responsive interface.",
-        tech: ["WordPress", "JavaScript", "CSS"],
-        link: "https://agrimorb.tn/",
-      },
-    ],
+    num: "01",
+    title: "OpusLAB E-learning Platform",
+    type: "Internship · 2025",
+    description:
+      "Modular SaaS with adaptive content, real-time learner tracking, and microservices architecture.",
+    tech: "NestJS · Next.js · Redis · MongoDB",
+    link: "https://github.com/safeselmi1/opuslab",
   },
   {
-    title: "Internship Projects",
-    projects: [
-      {
-        title: "OpusLAB E-learning Platform",
-        description:
-          "Modular e-learning platform with adaptive content, real-time tracking, automation pipelines, and microservices architecture.",
-        tech: ["NestJS", "Next.js", "Redis", "MongoDB"],
-        link: "https://github.com/safeselmi1/opuslab",
-      },
-      {
-        title: "TACIRCREA Project Management Platform",
-        description:
-          "Platform for managing innovative project holders, centralizing projects, and automating reporting workflows.",
-        tech: ["ReactJS", "Node.js", "MongoDB"],
-        link: "https://github.com/safeselmi1/Tacircrea",
-      },
-      {
-        title: "Official OpusLAB Website",
-        description:
-          "Official company website focused on SEO optimization, clean interface, and improved user experience.",
-        tech: ["Next.js", "Node.js", "MongoDB"],
-        link: "https://opuslab.tn/fr",
-      },
-    ],
+    num: "02",
+    title: "TACIRCREA Management Platform",
+    type: "Internship · 2024",
+    description:
+      "Project management app centralising 50+ innovative projects with Google Sheets automation.",
+    tech: "ReactJS · Node.js · MongoDB · Neo4j",
+    link: "https://github.com/safeselmi1/Tacircrea",
   },
   {
-    title: "Academic Projects",
-    projects: [
-      {
-        title: "Foyer Management Application",
-        description:
-          "Backend application for managing university dormitory operations using Spring Boot architecture.",
-        tech: ["Java", "Spring Boot", "REST API"],
-        link: "https://github.com/safeselmi1/foyerSpring.git",
-      },
-      {
-        title: "Dental Clinic Mobile App",
-        description:
-          "Mobile application for managing dental clinic appointments and patients.",
-        tech: ["Java"],
-        link: "#",
-      },
-      {
-        title: "YouTube Clone",
-        description:
-          "Frontend YouTube clone with video playback, comments, and subscription features.",
-        tech: ["ReactJS"],
-        link: "#",
-      },
-    ],
+    num: "03",
+    title: "Official OpusLAB Website",
+    type: "Internship · 2024",
+    description:
+      "Company website with SEO optimisation and improved user experience.",
+    tech: "Next.js · Node.js · MongoDB",
+    link: "https://opuslab.tn/fr",
+  },
+  {
+    num: "04",
+    title: "Lamiss Fitness Platform",
+    type: "Freelance · 2026",
+    description:
+      "WooCommerce fitness platform with subscriptions, auto workout generation, and member dashboard.",
+    tech: "WordPress · WooCommerce · PHP · CSS",
+    link: "https://shop.lamissfitness.com/my-account/",
+  },
+  {
+    num: "05",
+    title: "Agrimorb Website",
+    type: "Freelance · 2026",
+    description:
+      "Sustainable agriculture showcase with SEO-optimised responsive design.",
+    tech: "WordPress · JavaScript · CSS",
+    link: "https://agrimorb.tn/",
+  },
+  {
+    num: "06",
+    title: "University Residence Management",
+    type: "Academic · 2024",
+    description:
+      "Full REST backend with room allocation, payment tracking, and role-based access control.",
+    tech: "Spring Boot · Spring Security · MySQL",
+    link: "https://github.com/safeselmi1/foyerSpring.git",
   },
 ];
 
 export default function Projects() {
   return (
-    <section id="projects" className="py-24">
-      <div className="max-w-6xl mx-auto px-6">
-        <h2 className="text-4xl font-bold mb-4">Projects</h2>
+    <section id="projects" className="max-w-4xl mx-auto px-10 py-24">
+      <p className="font-mono text-xs uppercase tracking-widest mb-8" style={{ color: "#D174D2" }}>
+        Work
+      </p>
 
-        <p className="text-gray-400 mb-12 max-w-2xl">
-          A selection of professional, internship, and academic projects built
-          with modern web technologies.
-        </p>
-
-        <div className="space-y-16">
-          {projectSections.map((section) => (
-            <div key={section.title}>
-              <h3 className="text-2xl font-semibold mb-6">
-                {section.title}
-              </h3>
-
-              <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-                {section.projects.map((project) => (
-                  <a
-                    key={project.title}
-                    href={project.link}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="block rounded-2xl border border-white/10 p-6 hover:border-violet-400 hover:-translate-y-1 transition-all"
-                  >
-                    <h4 className="text-xl font-semibold mb-3">
-                      {project.title}
-                    </h4>
-
-                    <p className="text-gray-400 mb-5 leading-relaxed">
-                      {project.description}
-                    </p>
-
-                    <div className="flex flex-wrap gap-2">
-                      {project.tech.map((item) => (
-                        <span
-                          key={item}
-                          className="text-sm rounded-full border border-white/10 px-3 py-1 text-gray-300"
-                        >
-                          {item}
-                        </span>
-                      ))}
-                    </div>
-                  </a>
-                ))}
+      <div style={{ borderTop: "1px solid rgba(255,255,255,0.08)" }}>
+        {projects.map(({ num, title, type, description, tech, link }) => (
+          <a
+            key={num}
+            href={link}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="group flex gap-8 py-8 items-start -mx-4 px-4 rounded-xl transition-colors"
+            style={{ borderBottom: "1px solid rgba(255,255,255,0.08)" }}
+            onMouseEnter={e => (e.currentTarget.style.background = "rgba(209,116,210,0.05)")}
+            onMouseLeave={e => (e.currentTarget.style.background = "transparent")}
+          >
+            <span className="font-mono text-xs text-white/20 pt-1 shrink-0">{num}</span>
+            <div className="flex-1 min-w-0">
+              <div className="flex items-baseline justify-between gap-4 flex-wrap">
+                <h3
+                  className="font-serif text-xl text-white transition-colors"
+                  style={{ transition: "color 0.2s" }}
+                  onMouseEnter={e => (e.currentTarget.style.color = "#D174D2")}
+                  onMouseLeave={e => (e.currentTarget.style.color = "white")}
+                >
+                  {title}
+                </h3>
+                <span className="font-mono text-xs text-white/30 shrink-0">{type}</span>
               </div>
+              <p className="text-white/50 text-sm mt-2 leading-relaxed">{description}</p>
+              <p className="font-mono text-xs text-white/25 mt-3">{tech}</p>
             </div>
-          ))}
-        </div>
+          </a>
+        ))}
       </div>
+
+      <div className="w-full h-px mt-24" style={{ background: "rgba(255,255,255,0.08)" }} />
     </section>
   );
 }
