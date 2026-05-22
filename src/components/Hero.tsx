@@ -14,7 +14,7 @@ export default function Hero() {
 
           <div className="shrink-0 mb-2">
             <img
-              src="/profile.jpg"
+              src="/profile.png"
               alt="Safé Selmi"
               className="w-32 h-32 rounded-full object-cover object-top"
               style={{ border: "3px solid rgba(209,116,210,0.4)" }}

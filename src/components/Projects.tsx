@@ -69,20 +69,13 @@ export default function Projects() {
             href={link}
             target="_blank"
             rel="noopener noreferrer"
-            className="group flex gap-8 py-8 items-start -mx-4 px-4 rounded-xl transition-colors"
+            className="group flex gap-8 py-8 items-start -mx-4 px-4 rounded-xl transition-colors hover:bg-[rgba(209,116,210,0.05)]"
             style={{ borderBottom: "1px solid rgba(255,255,255,0.08)" }}
-            onMouseEnter={e => (e.currentTarget.style.background = "rgba(209,116,210,0.05)")}
-            onMouseLeave={e => (e.currentTarget.style.background = "transparent")}
           >
             <span className="font-mono text-xs text-white/20 pt-1 shrink-0">{num}</span>
             <div className="flex-1 min-w-0">
               <div className="flex items-baseline justify-between gap-4 flex-wrap">
-                <h3
-                  className="font-serif text-xl text-white transition-colors"
-                  style={{ transition: "color 0.2s" }}
-                  onMouseEnter={e => (e.currentTarget.style.color = "#D174D2")}
-                  onMouseLeave={e => (e.currentTarget.style.color = "white")}
-                >
+                <h3 className="font-serif text-xl text-white group-hover:text-[#D174D2] transition-colors">
                   {title}
                 </h3>
                 <span className="font-mono text-xs text-white/30 shrink-0">{type}</span>
