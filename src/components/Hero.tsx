@@ -69,7 +69,7 @@ export default function Hero() {
             <div className="absolute inset-0 bg-violet-500/20 blur-3xl rounded-full" />
 
  <img
-  src="/profile.png"
+  src="/profile.jpg"
   alt="Safé Selmi"
   className="relative w-[400px] h-[620px] object-contain rounded-[2rem]"
 />
