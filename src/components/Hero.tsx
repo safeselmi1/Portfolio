@@ -28,7 +28,7 @@ export default function Hero() {
           <div className="space-y-4">
             <p className="text-white/60 text-lg leading-relaxed font-light">
               Full-stack engineer based in{" "}
-              <span className="text-white font-medium">Tunis, Tunisia</span>
+              <span className="text-white font-medium">Tunisia</span>
               . I build scalable web applications, teach programming to learners
               aged 12–22, and care deeply about clean, maintainable code.
             </p>
